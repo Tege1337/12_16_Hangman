@@ -92,11 +92,13 @@ elif difficulty == "3" or difficulty == "3.":
     running = True
     while running:
         guess = input("\nTippelj egy betűt: ")
+        if guess == " " or guess == inv
         for x in range(len(random_country)):
             if guess == random_country[x]:
                 print("jooo")
                 right_guesses.append(guess)
-            guesses.append(guess)
-            print(guesses)
-            print(right_guesses)
+                
+        guesses.append(guess)
+        print(guesses)
+        print(right_guesses)
             
