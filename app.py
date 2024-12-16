@@ -7,7 +7,6 @@ countries = get_countries()
 guesses = []
 right_guesses = []
 
-
 def beg_countries():
     easy_diff_countries = []
     for country in countries:
@@ -39,19 +38,48 @@ difficulty = str(input("Kérlek válassz egy nehézségi szintet! (Az indexét �
 if difficulty == "1" or difficulty == "1.":
     print("Kezdő szint kiválasztva! ")
     country = beg_countries()
-    
+
     lives = 7
     print(f"{Fore.RED}{"🫀 " * lives} ({lives}) életed van! {Fore.WHITE}")
 
     random_country = random.choice(country)
     goal = list(random_country)
     
-    for char in goal:
-        if char == " ":
-            print(" ", end="")
+    # for char in goal:
+    #     if char == " ":
+    #         print(" ", end="")
+    #     else:
+    #         print("_", end=" ")
+    display = []
+    for x in random_country:
+        if x == " ":
+            display += " "
         else:
-            print("_", end=" ")
-    print()
+            display += "_"
+    print(f"{' '.join(display)}")
+
+
+    running = True
+    while running:
+        guess = input("\nTippelj egy betűt! (Nincs benne nagy): ").lower()
+        if not (guess in random_country):
+            lives -= 1
+        index = 0
+        for c in random_country:
+            if c == guess:
+                display[index] = guess
+            index += 1
+            
+        print(f"{' '.join(display)}")
+        print(f"Életeid: {"🫀 " * lives} ({lives})")
+
+        if "_" not in display:
+            print(Fore.GREEN + "Nyertél! ☘️")
+            running = False
+
+        if lives == 0:
+            print(Fore.RED + "Vesztettél! 🤣")
+            running = False
 
 
 elif difficulty == "2" or difficulty == "2.":
@@ -64,12 +92,41 @@ elif difficulty == "2" or difficulty == "2.":
     random_country = random.choice(country)
     goal = list(random_country)
     
-    for char in goal:
-        if char == " ":
-            print(" ", end="")
+    # for char in goal:
+    #     if char == " ":
+    #         print(" ", end="")
+    #     else:
+    #         print("_", end=" ")
+    display = []
+    for x in random_country:
+        if x == " ":
+            display += " "
         else:
-            print("_", end=" ")
-    print()
+            display += "_"
+    print(f"{' '.join(display)}")
+
+
+    running = True
+    while running:
+        guess = input("\nTippelj egy betűt! (Nincs benne nagy): ").lower()
+        if not (guess in random_country):
+            lives -= 1
+        index = 0
+        for c in random_country:
+            if c == guess:
+                display[index] = guess
+            index += 1
+            
+        print(f"{' '.join(display)}")
+        print(f"Életeid: {"🫀 " * lives} ({lives})")
+
+        if "_" not in display:
+            print(Fore.GREEN + "Nyertél! ☘️")
+            running = False
+
+        if lives == 0:
+            print(Fore.RED + "Vesztettél! 🤣")
+            running = False
 
 elif difficulty == "3" or difficulty == "3.":
     print("Professzionális szint kiválasztva! ")
@@ -81,24 +138,38 @@ elif difficulty == "3" or difficulty == "3.":
     random_country = random.choice(country)
     goal = list(random_country)
     
-    for char in goal:
-        if char == " ":
-            print(" ", end="")
+    # for char in goal:
+    #     if char == " ":
+    #         print(" ", end="")
+    #     else:
+    #         print("_", end=" ")
+    display = []
+    for x in random_country:
+        if x == " ":
+            display += " "
         else:
-            print("_", end=" ")
-    print()
+            display += "_"
+    print(f"{' '.join(display)}")
 
 
     running = True
     while running:
-        guess = input("\nTippelj egy betűt: ")
-        if guess == " " or guess == inv
-        for x in range(len(random_country)):
-            if guess == random_country[x]:
-                print("jooo")
-                right_guesses.append(guess)
-                
-        guesses.append(guess)
-        print(guesses)
-        print(right_guesses)
+        guess = input("\nTippelj egy betűt! (Nincs benne nagy): ").lower()
+        if not (guess in random_country):
+            lives -= 1
+        index = 0
+        for c in random_country:
+            if c == guess:
+                display[index] = guess
+            index += 1
             
+        print(f"{' '.join(display)}")
+        print(f"Életeid: {"🫀 " * lives} ({lives})")
+
+        if "_" not in display:
+            print(Fore.GREEN + "Nyertél! ☘️")
+            running = False
+
+        if lives == 0:
+            print(Fore.RED + "Vesztettél! 🤣")
+            running = False
