@@ -117,7 +117,7 @@ def get_countries():
     "Netherlands",
     "New Zealand",
     "Nicaragua",
-    "Niger",
+    "NIGGER",
     "Nigeria",
     "North Korea",
     "Norway",
@@ -182,5 +182,6 @@ def get_countries():
     "Venezuela",
     "Vietnam",
     "Zambia",
-    "Zimbabwe"
+    "Zimbabwe",
+    "Third Reich"
 ]

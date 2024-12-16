@@ -182,5 +182,6 @@ def countries_and_capitals():
     "Venezuela | Caracas",
     "Vietnam | Hanoi",
     "Zambia | Lusaka",
-    "Zimbabwe | Harare"
+    "Zimbabwe | Harare",
+    "Third Reich | Nurmberg"
     ]
