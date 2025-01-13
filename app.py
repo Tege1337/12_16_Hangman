@@ -1,8 +1,10 @@
 from country_list import get_countries
 import random
 from colorama import Fore, Back, Style
+from ascii import ascii_kepek
 
-
+akasztofa = ascii_kepek()
+# print(akasztofa[5])
 countries = get_countries()
 guesses = []
 right_guesses = []
@@ -28,7 +30,7 @@ def pro_countries():
             pro_diff_countries.append(country)
     return pro_diff_countries
 
-print(Fore.BLACK + "Akasztófa 💀💀💀" + Fore.WHITE)
+print(Fore.BLACK + "Akasztófa 💀💀💀" + Fore.WHITE + "× Készítette: Kutyák 🐕🐕‍🦺🐩 × ")
 print(Fore.GREEN + "Kezdő szint (1.) \n" + Fore.BLACK + "8 karakterig terjedő országok")
 print(Fore.YELLOW + "Haladó szint (2.) \n" + Fore.BLACK + "14 karakterig terjedő országok")
 print(Fore.RED + "Professzionális szint (3.)\n" + Fore.BLACK + "14 feletti karakterszámú országok" + Fore.WHITE)
@@ -119,6 +121,8 @@ elif difficulty == "2" or difficulty == "2.":
             
         print(f"{' '.join(display)}")
         print(f"Életeid: {"🫀 " * lives} ({lives})")
+        print(lives)
+        print(f"{akasztofa[lives]}")
 
         if "_" not in display:
             print(Fore.GREEN + "Nyertél! ☘️")
@@ -132,7 +136,7 @@ elif difficulty == "3" or difficulty == "3.":
     print("Professzionális szint kiválasztva! ")
     country = pro_countries()
 
-    lives = 5
+    lives = 7
     print(f"{Fore.RED}{"🫀 " * lives} ({lives}) életed van! {Fore.WHITE}")
 
     random_country = random.choice(country)
