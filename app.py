@@ -47,11 +47,6 @@ if difficulty == "1" or difficulty == "1.":
     random_country = random.choice(country)
     goal = list(random_country)
     
-    # for char in goal:
-    #     if char == " ":
-    #         print(" ", end="")
-    #     else:
-    #         print("_", end=" ")
     display = []
     for x in random_country:
         if x == " ":
@@ -74,6 +69,7 @@ if difficulty == "1" or difficulty == "1.":
             
         print(f"{' '.join(display)}")
         print(f"Életeid: {"🫀 " * lives} ({lives})")
+        print(akasztofa[lives])
 
         if "_" not in display:
             print(Fore.GREEN + "Nyertél! ☘️")
@@ -88,17 +84,12 @@ elif difficulty == "2" or difficulty == "2.":
     print("Haladó szint kiválasztva! ")
     country = adv_countries()
 
-    lives = 6
+    lives = 7
     print(f"{Fore.RED}{"🫀 " * lives} ({lives}) életed van! {Fore.WHITE}")
 
     random_country = random.choice(country)
     goal = list(random_country)
     
-    # for char in goal:
-    #     if char == " ":
-    #         print(" ", end="")
-    #     else:
-    #         print("_", end=" ")
     display = []
     for x in random_country:
         if x == " ":
@@ -122,7 +113,7 @@ elif difficulty == "2" or difficulty == "2.":
         print(f"{' '.join(display)}")
         print(f"Életeid: {"🫀 " * lives} ({lives})")
         print(lives)
-        print(f"{akasztofa[lives]}")
+        print(akasztofa[lives])
 
         if "_" not in display:
             print(Fore.GREEN + "Nyertél! ☘️")
@@ -142,11 +133,6 @@ elif difficulty == "3" or difficulty == "3.":
     random_country = random.choice(country)
     goal = list(random_country)
     
-    # for char in goal:
-    #     if char == " ":
-    #         print(" ", end="")
-    #     else:
-    #         print("_", end=" ")
     display = []
     for x in random_country:
         if x == " ":
@@ -169,6 +155,7 @@ elif difficulty == "3" or difficulty == "3.":
             
         print(f"{' '.join(display)}")
         print(f"Életeid: {"🫀 " * lives} ({lives})")
+        print(akasztofa[lives])
 
         if "_" not in display:
             print(Fore.GREEN + "Nyertél! ☘️")
